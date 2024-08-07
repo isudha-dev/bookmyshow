@@ -1,0 +1,1174 @@
+{
+	"info": {
+		"_postman_id": "3b2b1179-71b9-4b80-b89a-297d14af93e8",
+		"name": "bookmyshow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2530113"
+	},
+	"item": [
+		{
+			"name": "getcity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/v1/api/city/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"api",
+						"city",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/v1/api/city/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"api",
+								"city",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 05 Aug 2024 16:10:59 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"name\": \"Mumbai\",\n        \"theaters\": [\n            {\n                \"name\": \"Balaji Multiplex\",\n                \"address\": \"Koparkhairane\"\n            },\n            {\n                \"name\": \"Cinepolis\",\n                \"address\": \"Vashi\"\n            }\n        ]\n    }\n}"
+				},
+				{
+					"name": "404",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/v1/api/city/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"api",
+								"city",
+								"1"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 05 Aug 2024 16:11:54 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"error_message\": \"City not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "createcity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Nashik",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/v1/api/city",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"api",
+						"city"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "Nashik",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/v1/api/city",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"api",
+								"city"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 05 Aug 2024 12:21:03 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 6,\n        \"createdAt\": \"2024-08-05T12:21:03.377+00:00\",\n        \"modifiedAt\": \"2024-08-05T12:21:03.377+00:00\",\n        \"name\": \"Nashik\",\n        \"theaters\": []\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "gettheater",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/v1/api/theater/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"api",
+						"theater",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/v1/api/theater/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"api",
+								"theater",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 05 Aug 2024 16:09:55 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 2,\n        \"createdAt\": \"2024-08-05T13:16:11.805+00:00\",\n        \"modifiedAt\": \"2024-08-05T13:16:11.805+00:00\",\n        \"name\": \"Cinepolis\",\n        \"address\": \"Vashi\",\n        \"city\": {\n            \"id\": 4,\n            \"createdAt\": \"2024-08-05T12:18:11.593+00:00\",\n            \"modifiedAt\": \"2024-08-05T12:18:11.593+00:00\",\n            \"name\": \"Mumbai\"\n        },\n        \"shows\": []\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "createtheater",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Cinepolis\",\n    \"address\": \"Vashi\",\n    \"cityId\": 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/v1/api/theater",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"api",
+						"theater"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Cinepolis\",\n    \"address\": \"Vashi\",\n    \"cityId\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/v1/api/theater",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"api",
+								"theater"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 05 Aug 2024 13:16:11 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 2,\n        \"createdAt\": \"2024-08-05T13:16:11.805+00:00\",\n        \"modifiedAt\": \"2024-08-05T13:16:11.805+00:00\",\n        \"name\": \"Cinepolis\",\n        \"address\": \"Vashi\",\n        \"city\": {\n            \"id\": 4,\n            \"createdAt\": \"2024-08-05T12:18:11.593+00:00\",\n            \"modifiedAt\": \"2024-08-05T12:18:11.593+00:00\",\n            \"name\": \"Mumbai\"\n        },\n        \"shows\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "getscreen",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/v1/api/screen/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"api",
+						"screen",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/v1/api/screen/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"api",
+								"screen",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 06 Aug 2024 08:23:11 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 5,\n        \"number\": 1,\n        \"theater\": {\n            \"id\": 2,\n            \"name\": \"Cinepolis\",\n            \"address\": \"Vashi\",\n            \"city\": {\n                \"id\": 4,\n                \"name\": \"Mumbai\"\n            },\n            \"shows\": []\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "createscreen",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"number\": 7,\n    \"theater_id\": 2,\n    \"platinum_count\": 5,\n    \"gold_count\": 4,\n    \"economy_count\": 3,\n    \"cols\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/v1/api/screen",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"api",
+						"screen"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"number\": 1,\n    \"theater_id\": 2,\n    \"platinum_count\": 15,\n    \"gold_count\": 13,\n    \"economy_count\": 9,\n    \"cols\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/v1/api/screen",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"api",
+								"screen"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 05 Aug 2024 16:38:59 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 5,\n        \"number\": 1,\n        \"theater\": {\n            \"id\": 2,\n            \"name\": \"Cinepolis\",\n            \"address\": \"Vashi\",\n            \"city\": {\n                \"id\": 4,\n                \"name\": \"Mumbai\"\n            },\n            \"shows\": []\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "getmovie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/v1/api/movie/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"api",
+						"movie",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/v1/api/movie/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"api",
+								"movie",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 06 Aug 2024 08:56:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Kalki\",\n        \"duration\": 180,\n        \"movieFeatures\": [\n            \"THREE_D\",\n            \"TWO_D\",\n            \"DOLBY\"\n        ],\n        \"languages\": [\n            \"HINDI\",\n            \"KANNADA\"\n        ],\n        \"shows\": []\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "createmovie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Maharaja\",\n    \"duration\": 90,\n    \"movie_features\": [\"TWO_D\", \"DOLBY\"],\n    \"languages\": [\"KANNADA\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/v1/api/movie",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"api",
+						"movie"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Maharaja\",\n    \"duration\": 90,\n    \"movie_features\": [\"TWO_D\", \"DOLBY\"],\n    \"languages\": [\"KANNADA\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/v1/api/movie",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"api",
+								"movie"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 06 Aug 2024 11:28:49 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Maharaja\",\n        \"duration\": 90,\n        \"movieFeatures\": [\n            \"TWO_D\",\n            \"DOLBY\"\n        ],\n        \"languages\": [\n            \"KANNADA\"\n        ],\n        \"shows\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "getshow",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/v1/api/show/10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"api",
+						"show",
+						"10"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/v1/api/show/10",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"api",
+								"show",
+								"10"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 06 Aug 2024 16:13:59 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 10,\n        \"screen\": {\n            \"id\": 5,\n            \"number\": 1,\n            \"theater\": {\n                \"id\": 2,\n                \"name\": \"Cinepolis\",\n                \"address\": \"Vashi\",\n                \"city\": {\n                    \"id\": 4,\n                    \"name\": \"Mumbai\"\n                },\n                \"shows\": []\n            }\n        },\n        \"startTime\": \"2024-08-10T15:30:00\",\n        \"showSeats\": [\n            {\n                \"id\": 751,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 752,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 753,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 754,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 755,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 756,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 757,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 758,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 759,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 760,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 761,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 762,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 763,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 764,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 765,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 766,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 767,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 768,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 769,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 770,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 771,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 772,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 773,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 774,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 775,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 776,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 777,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 778,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 779,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 780,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 781,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 782,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 783,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 784,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 785,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 786,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 787,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 788,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 789,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 790,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 791,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 792,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 793,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 794,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 795,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 796,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 797,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 798,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 799,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 800,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 801,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 802,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 803,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 804,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 805,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 806,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 807,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 808,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 809,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 810,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 811,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 812,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 813,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 814,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 815,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 816,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 817,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 818,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 819,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 820,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 821,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 822,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 823,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 824,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 825,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 826,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 827,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 828,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 829,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 830,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 831,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 832,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 833,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 834,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 835,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 836,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 837,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 838,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 839,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 840,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 841,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 842,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 843,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 844,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 845,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 846,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 847,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 848,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 849,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 850,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 851,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 852,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 853,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 854,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 855,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 856,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 857,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 858,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 859,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 860,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 861,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 862,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 863,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 864,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 865,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 866,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 867,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 868,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 869,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 870,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 871,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 872,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 873,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 874,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 875,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 876,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 877,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 878,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 879,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 880,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 881,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 882,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 883,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 884,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 885,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 886,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 887,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 888,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 889,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 890,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 891,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 892,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 893,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 894,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 895,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 896,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 897,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 898,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 899,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 900,\n                \"seatStatus\": \"AVAILABLE\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "createshow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"movie_id\": 2,\n    \"screen_id\": 8,\n    \"date_time\": \"2024-08-10T15:30:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/v1/api/show",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"api",
+						"show"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"movie_id\": 1,\n    \"screen_id\": 5,\n    \"date_time\": \"2024-08-07T21:30:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/v1/api/show",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"api",
+								"show"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 06 Aug 2024 11:50:39 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 4,\n        \"screen\": {\n            \"id\": 5,\n            \"number\": 1,\n            \"theater\": {\n                \"id\": 2,\n                \"name\": \"Cinepolis\",\n                \"address\": \"Vashi\",\n                \"city\": {\n                    \"id\": 4,\n                    \"name\": \"Mumbai\"\n                },\n                \"shows\": []\n            }\n        },\n        \"startTime\": \"2024-08-07T21:30:00\",\n        \"showSeats\": [\n            {\n                \"id\": 151,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 152,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 153,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 154,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 155,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 156,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 157,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 158,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 159,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 160,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 161,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 162,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 163,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 164,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 165,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 166,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 167,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 168,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 169,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 170,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 171,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 172,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 173,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 174,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 175,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 176,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 177,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 178,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 179,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 180,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 181,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 182,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 183,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 184,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 185,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 186,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 187,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 188,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 189,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 190,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 191,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 192,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 193,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 194,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 195,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 196,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 197,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 198,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 199,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 200,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 201,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 202,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 203,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 204,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 205,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 206,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 207,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 208,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 209,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 210,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 211,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 212,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 213,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 214,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 215,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 216,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 217,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 218,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 219,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 220,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 221,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 222,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 223,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 224,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 225,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 226,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 227,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 228,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 229,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 230,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 231,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 232,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 233,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 234,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 235,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 236,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 237,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 238,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 239,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 240,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 241,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 242,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 243,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 244,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 245,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 246,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 247,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 248,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 249,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 250,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 251,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 252,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 253,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 254,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 255,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 256,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 257,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 258,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 259,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 260,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 261,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 262,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 263,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 264,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 265,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 266,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 267,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 268,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 269,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 270,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 271,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 272,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 273,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 274,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 275,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 276,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 277,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 278,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 279,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 280,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 281,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 282,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 283,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 284,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 285,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 286,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 287,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 288,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 289,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 290,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 291,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 292,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 293,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 294,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 295,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 296,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 297,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 298,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 299,\n                \"seatStatus\": \"AVAILABLE\"\n            },\n            {\n                \"id\": 300,\n                \"seatStatus\": \"AVAILABLE\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "createbooking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_id\":1,\n    \"show_id\":12,\n    \"show_seat_ids\": [907, 916]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/v1/api/booking",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"api",
+						"booking"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer_id\":1,\n    \"show_id\":12,\n    \"show_seat_ids\": [907, 916]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/v1/api/booking",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"api",
+								"booking"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 06 Aug 2024 16:34:31 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 3,\n        \"customer\": {\n            \"id\": 1,\n            \"user\": {\n                \"id\": 1\n            },\n            \"email\": \"test@gmail.com\",\n            \"phone\": \"123987658\",\n            \"fullName\": \"Sudha M\"\n        },\n        \"show\": {\n            \"id\": 12,\n            \"screen\": {\n                \"id\": 8,\n                \"number\": 7,\n                \"theater\": {\n                    \"id\": 2,\n                    \"name\": \"Cinepolis\",\n                    \"address\": \"Vashi\",\n                    \"city\": {\n                        \"id\": 4,\n                        \"name\": \"Mumbai\"\n                    },\n                    \"shows\": []\n                }\n            },\n            \"startTime\": \"2024-08-10T15:30:00\",\n            \"showSeats\": [\n                {\n                    \"id\": 907,\n                    \"seatStatus\": \"BOOKED\"\n                },\n                {\n                    \"id\": 908,\n                    \"seatStatus\": \"AVAILABLE\"\n                },\n                {\n                    \"id\": 909,\n                    \"seatStatus\": \"AVAILABLE\"\n                },\n                {\n                    \"id\": 910,\n                    \"seatStatus\": \"AVAILABLE\"\n                },\n                {\n                    \"id\": 911,\n                    \"seatStatus\": \"AVAILABLE\"\n                },\n                {\n                    \"id\": 912,\n                    \"seatStatus\": \"AVAILABLE\"\n                },\n                {\n                    \"id\": 913,\n                    \"seatStatus\": \"AVAILABLE\"\n                },\n                {\n                    \"id\": 914,\n                    \"seatStatus\": \"AVAILABLE\"\n                },\n                {\n                    \"id\": 915,\n                    \"seatStatus\": \"AVAILABLE\"\n                },\n                {\n                    \"id\": 916,\n                    \"seatStatus\": \"BOOKED\"\n                }\n            ]\n        },\n        \"showSeats\": [\n            {\n                \"id\": 907,\n                \"seatStatus\": \"BOOKED\"\n            },\n            {\n                \"id\": 916,\n                \"seatStatus\": \"BOOKED\"\n            }\n        ],\n        \"status\": \"IN_PROGRESS\",\n        \"amount\": 1250\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "createcustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"isudha\",\n    \"password\":\"test123\",\n    \"email\":\"test@gmail.com\",\n    \"phone\":\"123987658\",\n    \"fullname\":\"Sudha M\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/v1/api/customer",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"api",
+						"customer"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"isudha\",\n    \"password\":\"test123\",\n    \"email\":\"test@gmail.com\",\n    \"phone\":\"123987658\",\n    \"fullname\":\"Sudha M\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/v1/api/customer",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"api",
+								"customer"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 06 Aug 2024 15:51:35 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"error_message\": \"Customer already exists\"\n}"
+				}
+			]
+		},
+		{
+			"name": "getcustomer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/v1/api/customer/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"v1",
+						"api",
+						"customer",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/v1/api/customer/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"v1",
+								"api",
+								"customer",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 06 Aug 2024 15:53:33 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 1,\n        \"user\": {\n            \"id\": 1\n        },\n        \"email\": \"test@gmail.com\",\n        \"phone\": \"123987658\",\n        \"fullName\": \"Sudha M\"\n    }\n}"
+				}
+			]
+		}
+	]
+}
